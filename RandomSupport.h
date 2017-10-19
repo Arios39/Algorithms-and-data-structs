@@ -6,7 +6,7 @@
 
 #include <random>
 
-int call_counter = 0;
+
 
 typedef std::uniform_int_distribution<long> uniform_distribution;
 typedef std::mt19937 randomizer;
@@ -23,9 +23,7 @@ uniform_distribution new_distribution(long start, long end){
 }
 
 long sample(uniform_distribution& dist, randomizer& r){
-    call_counter++;
     return dist(r);
 }
 
-#endif
-
+#endif /* RandomSupport_h */
